@@ -1,0 +1,15 @@
+[Unit]
+Description=SMS API
+After=network.target
+
+[Service]
+Type=simple
+# User=belfry
+# Group=belfry
+WorkingDirectory=/srv/sms-api
+ExecStart=/usr/bin/uv run app/main.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

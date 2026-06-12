@@ -1,0 +1,2 @@
+# PYTHONPATH=/srv/sms-api
+uv run python -m app.main
